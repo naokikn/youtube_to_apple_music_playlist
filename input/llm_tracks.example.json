@@ -1,0 +1,21 @@
+{
+  "playlist_title": "Playlist title",
+  "playlist_url": "https://www.youtube.com/playlist?list=PLxxxx",
+  "videos": [
+    {
+      "index": 1,
+      "video_title": "Video title",
+      "video_url": "https://www.youtube.com/watch?v=abc123",
+      "tracks": [
+        {
+          "artist": "Artist Name",
+          "title": "Song Title",
+          "raw_text": "00:00 Artist Name - Song Title",
+          "timestamp": "00:00",
+          "confidence": 0.95,
+          "notes": ""
+        }
+      ]
+    }
+  ]
+}
