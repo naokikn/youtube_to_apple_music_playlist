@@ -193,7 +193,7 @@ def determine_status(
 def flatten_llm_tracks(llm_data: dict[str, Any]) -> list[dict[str, Any]]:
     videos = llm_data.get("videos", [])
     if not isinstance(videos, list):
-        raise ValueError("output/llm_tracks.json の videos は配列である必要があります。")
+        raise ValueError("LLM抽出結果JSONの videos は配列である必要があります。")
 
     flattened: list[dict[str, Any]] = []
     for video in videos:
@@ -249,7 +249,7 @@ def validate_tracks(llm_tracks_path: Path) -> tuple[JsonDict, Counter[str]]:
     user_agent = get_musicbrainz_user_agent()
     llm_data = read_json(llm_tracks_path)
     if not isinstance(llm_data, dict):
-        raise ValueError("output/llm_tracks.json はJSONオブジェクトである必要があります。")
+        raise ValueError(f"{llm_tracks_path} はJSONオブジェクトである必要があります。")
 
     flattened_tracks = flatten_llm_tracks(llm_data)
     seen_keys: set[str] = set()

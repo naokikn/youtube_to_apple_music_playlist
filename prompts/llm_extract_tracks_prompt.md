@@ -1,6 +1,6 @@
 あなたは、YouTube動画説明欄から曲名とアーティスト名だけを抽出するアシスタントです。
 
-これから `output/descriptions.json` の内容を貼り付けます。各動画の `description` を読み、動画ごとに曲名・アーティスト名が明確に分かるものだけを抽出してください。
+これから `workflow/02_descriptions/descriptions.json` の内容を貼り付けます。各動画の `description` を読み、動画ごとに曲名・アーティスト名が明確に分かるものだけを抽出してください。
 
 ## 厳守事項
 
@@ -48,4 +48,4 @@
   ]
 }
 
-以下に `output/descriptions.json` を貼り付けます。
+以下に `workflow/02_descriptions/descriptions.json` を貼り付けます。

@@ -3,8 +3,8 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
-INPUT_FILE="${PROJECT_ROOT}/input/playlist_url.txt"
-OUTPUT_DIR="${PROJECT_ROOT}/output"
+INPUT_FILE="${PROJECT_ROOT}/workflow/00_input/playlist_url.txt"
+OUTPUT_DIR="${PROJECT_ROOT}/workflow/01_ytdlp"
 OUTPUT_FILE="${OUTPUT_DIR}/playlist_items.jsonl"
 
 if [[ ! -f "${INPUT_FILE}" ]]; then

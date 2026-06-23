@@ -2,8 +2,9 @@
 __pycache__/
 *.pyc
 .env
-output/*.json
-output/*.jsonl
-output/*.csv
-output/*.txt
-!output/.gitkeep
+output/
+workflow/**/*.json
+workflow/**/*.jsonl
+workflow/**/*.csv
+workflow/**/*.txt
+!workflow/**/.gitkeep
