@@ -4,6 +4,7 @@ import csv
 import json
 import re
 import unicodedata
+from json import JSONDecodeError
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -21,8 +22,16 @@ def read_text_file(path: Path) -> str:
 def read_json(path: Path) -> Any:
     if not path.exists():
         raise FileNotFoundError(f"入力JSONファイルが見つかりません: {path}")
-    with path.open("r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except UnicodeDecodeError as exc:
+        raise ValueError(f"{path} はUTF-8として読めません。文字コードや壊れた文字がないか確認してください: {exc}") from exc
+    except JSONDecodeError as exc:
+        raise ValueError(
+            f"{path} は有効なJSONではありません。LLM出力にMarkdownコードフェンス、説明文、"
+            f"スマートクォート（“ ”）、末尾カンマが混ざっていないか確認してください: {exc}"
+        ) from exc
 
 
 def write_json(path: Path, data: Any) -> None:

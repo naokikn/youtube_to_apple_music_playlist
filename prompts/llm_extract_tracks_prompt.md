@@ -5,6 +5,7 @@
 ## 厳守事項
 
 - 出力はJSONのみ。説明文、Markdown、コードフェンスは出力しないでください。
+- JSONのキーと文字列は、必ず半角ダブルクォート `"` で囲んでください。スマートクォート `“ ”` は使わないでください。
 - `descriptions.json` の `source.playlist_title` と `source.playlist_url` を、出力JSONのトップレベル `playlist_title` と `playlist_url` に引き継いでください。
 - 各動画の `index`, `video_title`, `video_url` は維持してください。
 - 曲名とアーティスト名が明確なものだけ抽出してください。
