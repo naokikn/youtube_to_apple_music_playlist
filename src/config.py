@@ -5,8 +5,6 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-INPUT_DIR = PROJECT_ROOT / "input"
-OUTPUT_DIR = PROJECT_ROOT / "output"
 PROMPTS_DIR = PROJECT_ROOT / "prompts"
 WORKFLOW_DIR = PROJECT_ROOT / "workflow"
 EXAMPLES_DIR = PROJECT_ROOT / "examples"

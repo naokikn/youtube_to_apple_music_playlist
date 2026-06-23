@@ -2,7 +2,7 @@
 __pycache__/
 *.pyc
 .env
-output/
+.DS_Store
 workflow/**/*.json
 workflow/**/*.jsonl
 workflow/**/*.csv
